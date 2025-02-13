@@ -30,6 +30,10 @@
 
 // console.log(objC.hasOwnProperty('z'));// проверяет есть ли собственное свойство объекта
 
+const dummyOdj = Object.create({ massage: 'Єто собственное свойство прототипа' });
+dummyOdj.massage = 'Это собственное свойство объекта';
+console.log('dummyOdj', dummyOdj);
+console.log(dummyOdj.massage);
 
 
 // Это собственное свойства объекта
