@@ -7,15 +7,30 @@
 //     - Цепочка прототипов
 
 
-const objC = {
-    z: 5,
-};
+// const objC = {
+//     z: 5,
+// };
+// console.log('objC', objC);
 
-const objB = Object.create(objC);
+// const objB = Object.create(objC);
+// objB.y = 2;
+// console.log('objB', objB);
 
-console.log(objC);
-console.log(objB);
-console.log(objC.hasOwnProperty('z'));
+// // console.log(objB.y);// 2
+// // console.log(objB.z);//5
+
+// const objA = Object.create(objB);
+// objA.x = 1;
+// console.log('objA', objA);
+
+// console.log(objA.z);//5
+
+// objA.z = 1000;
+// console.log(objA.z);//1000 создало собственное свойсто objA
+
+// console.log(objC.hasOwnProperty('z'));// проверяет есть ли собственное свойство объекта
+
+
 
 // Это собственное свойства объекта
 // Это свойство на объекте-прототипе
