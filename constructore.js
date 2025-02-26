@@ -51,17 +51,22 @@ console.log(myCar3);
 //   тоесть Car.prototype это ПРОТОТИП будующего обьекта(экземпляра)
 // 4.Ссылка на обьект возвращается в место вызова new Car
 
-// brand: 'Audi'
-// model: '03'
-// price: 35000
 
+const User = function ({ email, password } = {}) {
+    this.email = email;
+    this.password = password;
+};
 
-// brand: 'Audi'
-// model: 'A6'
-// price: 65000
+User.prototype.changeEmail = function (newEmail) {
+    this.email = newEmail;
+}
 
+const mango = new User({
+    email: 'mango@gmail.com',
+    password: '11111',
+});
 
-// brand: 'BMW'
-// model: 'x6'
-// price: 50000
+mango.changeEmail('mango222@gmail.com');
+
+console.log(mango);
 
