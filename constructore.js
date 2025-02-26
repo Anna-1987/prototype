@@ -10,17 +10,25 @@ const Car = function ({brand,model,price} = {}) {
     this.model = model;
     this.price = price;
 
-    this.changePrice = function (newPrice) {
-        this.price = newPrice;
-    }
+};
+Car.prototype.sayHi = function () {
+    console.log('Car.prototype.sayHi -> this', this);
+    console.log('Hello :)');
 };
 
+Car.prototype.changePrice = function (newPrice) {
+        this.price = newPrice;
+    }
+
+console.log(Car.prototype);
 const myCar = new Car({
     brand: 'Audi',
     model: 'Q3',
     price:'35000'
 });
 console.log(myCar);
+
+myCar.sayHi();
 
 const myCar2 = new Car({
 brand: 'Audi',
