@@ -70,3 +70,18 @@ mango.changeEmail('mango222@gmail.com');
 
 console.log(mango);
 
+// *************************************************************************
+// !!!Статические свойства и методы
+//     - Статические свойства и методы доступны только на самом конструкторе
+//     - В статических методах нет this
+// ***************************************************************************
+
+User.logInfo = function (obj) {
+    console.log('User.logInfo -> odj', obj);
+    console.log('Почта:', obj.email);
+    console.log('Пароль:', obj.password);
+};
+
+User.logInfo(mango);
+console.dir(User);
+
