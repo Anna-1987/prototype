@@ -16,6 +16,7 @@ class Car{
     }
 
     #test = 'test';// так делается приватное свойство
+    mySuperPublicField = 5555;// так делаются публичные свойства класса
 
     constructor({ brand, model, price } = {}) {
         // console.log('выполняется constructor');
@@ -23,9 +24,9 @@ class Car{
         // this.a = 5;
         // this.b = 10;
 
-        this.brand = brand;
-        this.model = model;
-        this.price = price;
+        this.brand = brand;//публичные свойства класса 
+        this.model = model;//публичные свойства класса 
+        this.price = price;//публичные свойства класса 
 
 
     }
